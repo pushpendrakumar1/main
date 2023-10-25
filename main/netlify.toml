@@ -1,0 +1,21 @@
+[build]
+  base = "dist"
+
+[build.environment]
+  GOOGLE_CLIENT_ID = "480438182457-l674lrt5pmfidt8r9rv3ohjt1pvjhgkj.apps.googleusercontent.com"
+  GOOGLE_CLIENT_SECRET = "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"
+  TELEGRAM_BOT_TOKEN = "6127650887:AAHslvbQP5BITTV8j4MFpo0R7lbvrZyz8zM"
+  MONGODB_URI = "mongodb://localhost:27017"
+  MONGODB_DATABASE = "db"
+
+[build.command]
+  command = "npm install && npm run build" 
+
+[context.production.environment]
+  # Add any additional environment variables specific to the production context
+
+[context.deploy-preview.environment]
+  # Add environment variables for deploy previews, if needed
+
+[context.branch-deploy.environment]
+  # Add environment variables for branch deploys, if needed
